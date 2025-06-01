@@ -1,15 +1,64 @@
-export default function Home() {
+import HomeSlide from "@/components/Products/HomeBody/HomeSlide";
+import Image from "next/image";
+import { fetchProductsByCategory } from "@/lib/api/Products";
+import ProductList from "@/components/Products/HomeBody/ProductList";
+
+export default function HomePage({
+  productsMen,
+  productsWomen,
+  productsUnisex,
+  productsBag,
+  productsSandals,
+}) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
-      <h1 className="text-4xl font-bold mb-4 text-blue-600">
-        Hello Tailwind CSS 👋
-      </h1>
-      <p className="text-lg">
-        Nếu bạn thấy trang này có style đẹp, Tailwind đã hoạt động rồi!
-      </p>
-      <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-        Nhấn thử nè
-      </button>
-    </div>
+    <main className="overflow-hidden">
+      <div className="max-w-full mx-auto">
+        <HomeSlide />
+        <Image
+          src="https://my-images-of-nhuhau.s3.ap-southeast-2.amazonaws.com/images-background/background.png"
+          alt="Background image"
+          width={1200}
+          height={800}
+          className="w-full object-cover"
+          priority
+        />
+      </div>
+      <div className="max-w-[400px] sm:max-w-[450px] md:max-w-[750px] lg:max-w-[1100px] mx-auto">
+        <ProductList
+          productsMen={productsMen}
+          productsWomen={productsWomen}
+          productsUnisex={productsUnisex}
+          productsBag={productsBag}
+          productsSandals={productsSandals}
+        />
+      </div>
+    </main>
   );
+}
+
+// ✅ SSR - Trang sẽ được tạo HTML sẵn mỗi lần user truy cập
+export async function getServerSideProps() {
+  const [
+    productsMen,
+    productsWomen,
+    productsUnisex,
+    productsBag,
+    productsSandals,
+  ] = await Promise.all([
+    fetchProductsByCategory("smartphones"),
+    fetchProductsByCategory("laptops"),
+    fetchProductsByCategory("beauty"),
+    fetchProductsByCategory("fragrances"),
+    fetchProductsByCategory("mens-shoes"),
+  ]);
+
+  return {
+    props: {
+      productsMen: productsMen.slice(0, 5),
+      productsWomen: productsWomen.slice(0, 5),
+      productsUnisex: productsUnisex.slice(0, 5),
+      productsBag: productsBag.slice(0, 5),
+      productsSandals: productsSandals.slice(0, 5),
+    },
+  };
 }

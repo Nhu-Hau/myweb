@@ -1,0 +1,93 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Position dots overlay on image */
+:global(.slick-dots) {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+/* Dot container */
+:global(.slick-dots li) {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+/* Hide default circle icon */
+:global(.slick-dots li button) {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Dots shape: small capsule (pill) */
+:global(.slick-dots li button:before) {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+/* Active dot: pill with width expand */
+:global(.slick-dots li.slick-active button:before) {
+  background-color: #ffffff;
+  width: 24px;
+  height: 8px;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Hover effect */
+:global(.slick-dots li button:hover:before) {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :global(.slick-dots) {
+    bottom: 12px;
+    gap: 6px;
+  }
+
+  :global(.slick-dots li button:before) {
+    width: 6px;
+    height: 6px;
+  }
+
+  :global(.slick-dots li.slick-active button:before) {
+    width: 16px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(.slick-dots) {
+    bottom: 8px;
+    gap: 5px;
+  }
+
+  :global(.slick-dots li button:before) {
+    width: 5px;
+    height: 5px;
+  }
+
+  :global(.slick-dots li.slick-active button:before) {
+    width: 12px;
+    height: 5px;
+  }
+}

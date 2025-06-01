@@ -1,0 +1,67 @@
+:global(.socialIcon) {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+:global(.socialIcon:hover) {
+  transform: scale(1.2);
+}
+
+:global(.facebook:hover) {
+  color: #1877f2;
+}
+
+:global(.messenger:hover) {
+  color: #1877f2;
+}
+
+:global(.instagram:hover) {
+  background: linear-gradient(25deg, #fdc830, #f58529, #dd2a7b, #8134af);
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 2px;
+  transform: scale(1.1);
+}
+
+:global(.tiktok) {
+  font-size: 1.45rem;
+}
+
+:global(.tiktok:hover) {
+  color: #000000;
+}
+
+:global(.email:hover) {
+  color: #cf493f;
+}
+
+:global(.phone:hover) {
+  color: #098e07;
+}
+
+:global(.youtube:hover) {
+  color: #ff0000;
+}
+
+:global(.user:hover),
+:global(.cart:hover) {
+  color: #4f39f6;
+}
+
+:global(.sun:hover) {
+  color: #f0d343;
+}
+
+@media (min-width: 1024px) {
+  :global(.socialIcon) {
+    font-size: 1.5rem;
+  }
+
+  :global(.tiktok) {
+    font-size: 1.625rem;
+  }
+}
+
+
