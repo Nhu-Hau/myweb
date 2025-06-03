@@ -1,17 +1,19 @@
 import React from "react";
 import Link from "next/link";
+import SocialIcons from "./SocialIcons";
+import styles from "@/components/Header.module.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-[#F4F4F4] text-black py-12">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
           {/* Giới thiệu công ty */}
           <div>
-            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-4">
+            <h5 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-4">
               Về NuHau&Co.
-            </h3>
-            <p className="text-xs md:text-sm text-gray-400 text-justify">
+            </h5>
+            <p className="text-xs md:text-sm text-black text-justify">
               Tại NuHau&Co. chúng tôi tin rằng thời trang là cách bạn kể câu
               chuyện riêng của mình. Từ những thiết kế tối giản hàng ngày đến
               các item thể thao năng động, mỗi sản phẩm được chọn lọc kỹ lưỡng
@@ -30,7 +32,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#faq"
-                  className="text-gray-400 hover:text-white"
+                  className="text-black hover:text-gray-400"
                   aria-label="Câu hỏi thường gặp"
                 >
                   Câu hỏi thường gặp
@@ -39,7 +41,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#support"
-                  className="text-gray-400 hover:text-white"
+                  className="text-black hover:text-gray-400"
                   aria-label="Hỗ trợ khách hàng"
                 >
                   Hỗ trợ khách hàng
@@ -48,7 +50,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#returns"
-                  className="text-gray-400 hover:text-white"
+                  className="text-black hover:text-gray-400"
                   aria-label="Chính sách đổi trả"
                 >
                   Chính sách đổi trả
@@ -57,7 +59,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#terms"
-                  className="text-gray-400 hover:text-white"
+                  className="text-black hover:text-gray-400"
                   aria-label="Điều khoản sử dụng"
                 >
                   Điều khoản sử dụng
@@ -72,16 +74,17 @@ const Footer = () => {
               Chăm sóc khách hàng
             </h4>
             <ul className="space-y-2 text-xs md:text-sm">
-              <li className="text-gray-400">
+              <li className="text-black">
                 <strong>Số điện thoại:</strong> 0833115510 - 0878845757
               </li>
-              <li className="text-gray-400">
+              <li className="text-black">
                 <strong>Email:</strong> hausu999@gmail.com
               </li>
-              <li className="text-gray-400">
+              <li className="text-black">
                 <strong>Địa chỉ:</strong> 748/33 Thống Nhất, phường 15, Gò Vấp,
                 TP Hồ Chí Minh
               </li>
+              <SocialIcons />
             </ul>
           </div>
         </div>

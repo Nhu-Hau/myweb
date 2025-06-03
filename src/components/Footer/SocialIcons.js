@@ -8,11 +8,10 @@ import { AiFillTikTok } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { MdLocalPhone } from "react-icons/md";
 import { IoLogoYoutube } from "react-icons/io5";
-import styles from "./Header.module.css";
 
 function SocialIcons() {
   return (
-    <nav className="w-full flex items-center justify-center sm:justify-between">
+    <nav className="w-full flex items-center">
       <div className="flex flex-nowrap gap-4 sm:gap-2 items-center justify-center">
         <a
           href="https://www.facebook.com/hnhuwhaauu.2002/"
@@ -20,7 +19,9 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
-          <FaFacebookSquare className="socialIcon facebook" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <FaFacebookSquare className="socialIcon facebook" />
+          </span>
         </a>
         <a
           href="https://m.me/hnhuwhaauu.2002"
@@ -28,7 +29,9 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="Messenger"
         >
-          <FaFacebookMessenger className="socialIcon messenger" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <FaFacebookMessenger className="socialIcon messenger" />
+          </span>
         </a>
         <a
           href="https://www.instagram.com/hnhuwhaauu/"
@@ -36,7 +39,9 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <FaInstagram className="socialIcon instagram" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <FaInstagram className="socialIcon instagram" />
+          </span>
         </a>
         <a
           href="https://www.tiktok.com/@hnhuwhaauu2002"
@@ -44,7 +49,9 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="TikTok"
         >
-          <AiFillTikTok className="socialIcon tiktok" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <AiFillTikTok className="socialIcon tiktok" />
+          </span>
         </a>
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=hnhuhau1702@gmail.com"
@@ -52,10 +59,14 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="Gmail"
         >
-          <SiGmail className="socialIcon email" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <SiGmail className="socialIcon email" />
+          </span>
         </a>
         <a href="tel:+84833115510" aria-label="Phone">
-          <MdLocalPhone className="socialIcon phone" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <MdLocalPhone className="socialIcon phone" />
+          </span>
         </a>
         <a
           href="https://www.youtube.com/@nhuhau1702"
@@ -63,7 +74,9 @@ function SocialIcons() {
           rel="noopener noreferrer"
           aria-label="YouTube"
         >
-          <IoLogoYoutube className="socialIcon youtube" />
+          <span className="w-6 h-6 flex items-center justify-center">
+            <IoLogoYoutube className="socialIcon youtube" />
+          </span>
         </a>
       </div>
     </nav>

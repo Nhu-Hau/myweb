@@ -1,10 +1,17 @@
 :global(.socialIcon) {
   font-size: 1.25rem;
-  color: #4a4a4a;
+  color: #000000;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-:global(.socialIcon:hover) {
+:global(.userAction) {
+  color: #000000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+:global(.socialIcon:hover),
+:global(.userAction:hover) {
   transform: scale(1.2);
 }
 
@@ -45,6 +52,7 @@
   color: #ff0000;
 }
 
+:global(.search:hover),
 :global(.user:hover),
 :global(.cart:hover) {
   color: #4f39f6;
@@ -55,12 +63,8 @@
 }
 
 @media (min-width: 1024px) {
-  :global(.socialIcon) {
-    font-size: 1.5rem;
-  }
-
   :global(.tiktok) {
-    font-size: 1.625rem;
+    font-size: 1.3rem;
   }
 }
 
